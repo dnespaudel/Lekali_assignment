@@ -22,6 +22,8 @@ def _(data):
     formatted_header = f'{type(data).__name__} -> key : value'
     print(formatted_header)
     print('-' * len(formatted_header))
+    for key, value in data.items():
+        print(f'({type(key).__name__}) {key}: ({type(value).__name__}) {value}')
     my_list = []
     for value in data.values():
         if isinstance(value, int) and value != True or False:
